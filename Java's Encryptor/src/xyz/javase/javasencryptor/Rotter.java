@@ -45,5 +45,31 @@ public class Rotter {
 		
 		return output.toString();
 	}
+
+	public char rotate(char input) {
+		// TODO Auto-generated method stub
+		char output;
+		
+			int asciiForC = input;
+			
+			//this is a space. We are keeping space for now
+			if(asciiForC == 32) {
+				return ' ';
+			}	
+			
+			
+			//rotate letter by the shift amount
+			asciiForC += shift;
+			
+			//check if letter loops back from z
+			if(asciiForC > 90) {
+				asciiForC -= 26;
+			}
+			
+			
+			output = (char) asciiForC;
+		
+			return output;
+	}
 	
 }

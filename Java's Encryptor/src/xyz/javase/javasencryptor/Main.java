@@ -45,6 +45,10 @@ public class Main {
 //			System.out.println("Output using " + i +": " + ecLoop.encodedMessage(code));
 //		}
 		
+		VigenereCipher vingenere = new VigenereCipher("HEART");
+		String vin = vingenere.encryptString("TOMORROW HEAD NORTH TO HEADQUARTERS");
+		System.out.println("TOMORROW HEAD NORTH TO HEADQUARTERS");
+		System.out.println(vin);
 	}
 	
 	public static String generateAlphabet() {
