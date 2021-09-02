@@ -32,6 +32,6 @@ public class DecoderForSimpleSub {
 			
 		}
 		 
-		return output.toString();
+		return output.toString().toLowerCase();
 	}
 }

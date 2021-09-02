@@ -49,6 +49,23 @@ public class Main {
 		String vin = vingenere.encryptString("TOMORROW HEAD NORTH TO HEADQUARTERS");
 		System.out.println("TOMORROW HEAD NORTH TO HEADQUARTERS");
 		System.out.println(vin);
+		
+		
+		VigenereCipher evingenere = new VigenereCipher("GUESS");
+		String evin = evingenere.decryptString("ZIQG JXIA ZWGX WGMZ BXGT GMIU SSJ");
+		System.out.println("ZIQG JXIA ZWGX WGMZ BXGT GMIU SSJ");
+		System.out.println(evin);
+		
+		AutoKeyCipher autokeyCipher = new AutoKeyCipher("AVOID");
+		String autokey = autokeyCipher.encodeMessgae("AT SIX HEAD EAST TO ENEMY CAMP");
+		System.out.println("AT SIX HEAD EAST TO ENEMY CAMP");
+		System.out.println(autokey);	
+		
+		AutoKeyCipher autokeyCipher2 = new AutoKeyCipher("MUSIC");
+		String autokey2 = autokeyCipher2.decodeMessgae("UHLE QLNR OGSY MFLP PURM");
+		System.out.println("UHLE QLNR OGSY MFLP PURM");
+		System.out.println(autokey2);
+		
 	}
 	
 	public static String generateAlphabet() {

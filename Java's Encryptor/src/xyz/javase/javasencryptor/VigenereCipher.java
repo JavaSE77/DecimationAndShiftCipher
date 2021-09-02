@@ -50,4 +50,26 @@ public class VigenereCipher {
 		return output.toString();
 	}
 	
+	public String decryptString(String msg) {
+		StringBuilder output = new StringBuilder();
+		
+		int spaceCounter = 0;
+		
+		for(int i = 0; i < msg.toCharArray().length; i++) {
+			if(msg.toCharArray()[i] == 32) {
+				//then it is a space
+				spaceCounter++;
+			}
+			Rotter rot = new Rotter(Math.abs((key[((i - spaceCounter) % key.length)] - 65)- 26));
+			output.append(rot.rotate(msg.toCharArray()[i]));
+			
+//			System.out.println("DEBUG " + " starting char " + (char) msg.toCharArray()[i] +
+//					" offset " + Math.abs((key[((i - spaceCounter) % key.length)] - 65)- 26) + " || " + (char) (key[((i - spaceCounter) % key.length)])
+//					+ " output of:" + rot.rotate(msg.toCharArray()[i]));
+		}
+		
+		
+		return output.toString().toLowerCase();
+	}
+	
 }
