@@ -66,6 +66,43 @@ public class Main {
 		System.out.println("UHLE QLNR OGSY MFLP PURM");
 		System.out.println(autokey2);
 		
+		
+		String input;
+		String output;
+		System.out.println("Old Ciphers reprogrammed");
+		
+		
+		AdditiveCipher ad = new AdditiveCipher(15);
+		input = "Strawberry";
+		output = ad.encode(input);
+		System.out.println(input);
+		System.out.println(output);
+		
+		MultiplicativeCipher md = new MultiplicativeCipher(25);
+		input = "sound";
+		output = md.encode(input);
+		System.out.println(input);
+		System.out.println(output);
+		
+		VigenereCipher cd = new VigenereCipher("TEACH");
+		input = "AT ONE ATTACK FRONT LINES";
+		output = cd.encryptString(input);
+		System.out.println(input);
+		System.out.println(output);
+		
+		AffineCipher ac = new AffineCipher(17, -25);
+		input = "EHZQM ";
+		output = ac.encode(input);
+		System.out.println(input);
+		System.out.println(output);
+		
+		cd = new VigenereCipher("PLANT");
+		input = "PEFV OTDU EOTT LYTC NEBG ICEA VWPS";
+		output = cd.decryptString(input);
+		System.out.println(input);
+		System.out.println(output);
+		
+		
 	}
 	
 	public static String generateAlphabet() {
